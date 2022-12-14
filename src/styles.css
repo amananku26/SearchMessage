@@ -1,4 +1,38 @@
-.App {
-  font-family: sans-serif;
-  text-align: center;
+* {
+  margin: 0;
+}
+.header {
+  background-color: #ff0044;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  color: whitesmoke;
+  padding-left: 30px;
+}
+
+.inputBox {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  padding-left: 30px;
+  align-items: center;
+  border-radius: 50px;
+  border: 0.1px solid grey;
+  width: 80%;
+}
+.Contact {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  justify-content: left;
+  border: 0.1px solid black;
+}
+img {
+  height: 80px;
+  border-radius: 100px;
+  border: 2px solid #ff0044;
+  margin-left: 15px;
+}
+.textContact {
+  margin-left: 20px;
 }
