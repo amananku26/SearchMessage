@@ -6,7 +6,7 @@ export default function App() {
   const [apiData, setApiData] = React.useState([]);
   React.useEffect(() => {
     fetch(
-      "https://randomuser.me/api/?results=20&amp;inc=name,picture,id,cell&amp;nat=in"
+      "https://randomuser.me/api/?results=20&amp;inc=name,picture,id,cell&amp;nat=us"
     )
       .then((response) => response.json())
       .then((response) => {
@@ -19,9 +19,10 @@ export default function App() {
     if (e.target.value.length === 0) {
       setUseData(apiData);
     } else {
-      const newresult = apiData.filter((item) =>
-        item.name.first.toLowerCase().includes(e.target.value.toLowerCase())
-      );
+      const newresult = apiData.filter((item) => {
+        const CheckName = `${item.name.first.toLowerCase()} ${item.name.last.toLowerCase()}`;
+        return CheckName.toLowerCase().includes(e.target.value.toLowerCase());
+      });
       setUseData(newresult);
     }
   };
